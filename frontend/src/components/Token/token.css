@@ -1,0 +1,233 @@
+.token-page {
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.token-page h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.token-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.token-table th,
+.token-table td {
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.token-table th {
+  background: #f0f4f8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.token-table tr {
+  transition: background 0.3s, transform 0.2s;
+}
+
+.token-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.token-table tr:hover {
+  background: #e6f0ff;
+  transform: scale(1.01);
+}
+
+.clickable {
+  cursor: pointer;
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.token-table button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.token-table button:hover {
+  opacity: 0.9;
+}
+
+.token-table button:active {
+  transform: scale(0.98);
+}
+
+.token-table button.cancel {
+  background: #f87171;
+  color: #fff;
+}
+
+.token-table button.update {
+  background: #10b981;
+  color: #fff;
+}
+
+.token-table button.edit {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.token-table button.prescribe {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* Edit Issue Container */
+.edit-issue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Input field inside edit */
+.edit-issue input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  min-width: 120px;
+  flex: 1;
+  transition: border 0.2s;
+}
+
+.edit-issue input:focus {
+  border-color: #3b82f6; /* blue focus */
+  outline: none;
+}
+
+/* Buttons inside edit */
+.edit-issue button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Update Button */
+.edit-issue button:nth-child(2) {
+  background-color: #10b981; /* Green */
+  color: #fff;
+}
+
+.edit-issue button:nth-child(2):hover {
+  background-color: #059669;
+}
+
+/* Absent Button */
+.edit-issue button:nth-child(3) {
+  background-color: #f87171; /* Red */
+  color: #fff;
+}
+
+.edit-issue button:nth-child(3):hover {
+  background-color: #ef4444;
+}
+
+.pres {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Add Medicine Button */
+.pres:nth-of-type(1) {
+  background: #2980b9;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.pres:nth-of-type(1):hover {
+  background: #1f6391;
+}
+
+@media (max-width: 1024px) {
+  .token-table th, .token-table td {
+    font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .token-table, .token-table th, .token-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .token-table tr {
+    margin-bottom: 15px;
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .token-table th {
+    display: none;
+  }
+
+  .token-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .token-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .token-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555;
+    margin-right: 8px;
+  }
+
+  .edit-issue {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .edit-issue button {
+    width: 100%;
+  }
+
+  .edit-issue input {
+    width: 100%;
+  }
+}
+
+.token-table td:last-child button {
+  margin-top: 4px;
+}

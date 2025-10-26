@@ -1,0 +1,124 @@
+.patients-page {
+  padding: 20px;
+  overflow-x: auto;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.patients-page h2 {
+  margin-bottom: 20px;
+  color: #004d40;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.patients-page table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  min-width: 600px;
+  background: #fff;
+}
+
+.patients-page th,
+.patients-page td {
+  padding: 14px 16px;
+  text-align: left;
+  color: #333;
+}
+
+.patients-page th {
+  background-color: #00796b;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.patients-page tbody tr {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.patients-page tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.patients-page tbody tr:hover {
+  background-color: #b2dfdb;
+  transform: scale(1.01);
+}
+
+.patients-page td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.patients-page .no-data {
+  text-align: center;
+  color: #004d40;
+  font-style: italic;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Clickable row style */
+.patients-page tr.clickable:hover {
+  background-color: #80cbc4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .patients-page table {
+    font-size: 0.95rem;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .patients-page table {
+    font-size: 0.85rem;
+  }
+
+  .patients-page th, 
+  .patients-page td {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .patients-page table, 
+  .patients-page th, 
+  .patients-page td {
+    display: block;
+    width: 100%;
+  }
+
+  .patients-page th {
+    text-align: left;
+  }
+
+  .patients-page tr {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .patients-page td {
+    border-bottom: none;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .patients-page td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #00796b;
+  }
+}
