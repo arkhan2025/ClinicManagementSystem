@@ -8,7 +8,7 @@ import Patients from "./components/Patients/patients";
 import PatientProfile from "./components/PatientProfile/patientProfile";
 import PatientForm from "./components/patientForm";
 import Prescriptions from "./components/prescriptionCard";
-import ProtectedRoute from "./components/routes/ProtectedRoute";
+import ProtectedRoute from "./components/Routes/ProtectedRoute";
 import { AuthProvider, useAuth } from "./components/context/AuthContext";
 
 const RoleRedirect = () => {
