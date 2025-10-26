@@ -1,7 +1,7 @@
 // backend/routes/receptionist.js
 import express from "express";
 import Patient from "../models/Patient.js";
-import Token from "../models/Token.js";
+import Token from "../models/token.js";
 import Billing from "../models/Billing.js";
 
 const router = express.Router();

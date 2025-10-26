@@ -1,7 +1,7 @@
 import express from "express";
 import bcrypt from "bcryptjs";
-import Doctor from "../models/Doctor.js";
-import Receptionist from "../models/Receptionist.js";
+import Doctor from "../models/doctor.js";
+import Receptionist from "../models/receptionist.js";
 
 const router = express.Router();
 
