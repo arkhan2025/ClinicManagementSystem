@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://clinic-management-system-0bga.onrender.com", // 🔹 backend base URL
+  baseURL: "https://clinic-management-system-0bga.onrender.com/api", // 🔹 backend base URL
 });
 
 API.interceptors.request.use((req) => {
