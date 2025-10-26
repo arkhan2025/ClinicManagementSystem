@@ -1,0 +1,289 @@
+.prescription-card-page {
+  padding: 30px;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.prescription-card-page h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Medicine Row Container */
+.medicine-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 950px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medicine-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Input Styles */
+.medicine-row input[type="text"],
+.medicine-row input[type="number"] {
+  width: 150px;
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.medicine-row input[type="text"]:focus,
+.medicine-row input[type="number"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Label Styles */
+.medicine-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #eef6ff;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.medicine-row label:hover {
+  background: #dceeff;
+}
+
+/* Add Medicine Button */
+.add {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 10px 24px;
+  background: #2e86de;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add:hover {
+  background: #1e6ec9;
+  transform: translateY(-2px);
+}
+
+/* Notes Section */
+.notes-section {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 950px;
+}
+
+.notes-section textarea {
+  width: 100%;
+  height: 130px;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.notes-section textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Discount Section */
+.discount-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.discount-section label {
+  font-weight: 500;
+  color: #333;
+}
+
+.discount-section input {
+  width: 80px;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.discount-section input:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 6px rgba(39, 174, 96, 0.4);
+}
+
+/* Complete Button */
+.complete-btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #27ae60;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.complete-btn:hover {
+  background: #1e8449;
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 14px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  color: #e74c3c;
+}
+
+.modal-content p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirm-btn,
+.cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn {
+  background: #27ae60;
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background: #1e8449;
+}
+
+.cancel-btn {
+  background: #ccc;
+}
+
+.cancel-btn:hover {
+  background: #b3b3b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .medicine-row input[type="text"],
+  .medicine-row input[type="number"] {
+    width: 130px;
+  }
+
+  .discount-section input {
+    width: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  .medicine-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .medicine-row input[type="text"],
+  .medicine-row input[type="number"] {
+    width: 100%;
+  }
+
+  .discount-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .complete-btn,
+  .add {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescription-card-page {
+    padding: 20px;
+  }
+
+  .medicine-row {
+    padding: 12px;
+  }
+
+  .prescription-card-page h2 {
+    font-size: 1.5rem;
+  }
+}
