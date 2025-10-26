@@ -1,3 +1,4 @@
+/* ===== Token Page Container ===== */
 .token-page {
   padding: 30px 20px;
   background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
@@ -11,8 +12,10 @@
   margin-bottom: 20px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  font-size: 1.8rem;
 }
 
+/* ===== Token Table ===== */
 .token-table {
   width: 100%;
   border-collapse: separate;
@@ -57,44 +60,42 @@
   text-decoration: underline;
 }
 
+/* ===== Buttons ===== */
 .token-table button {
   padding: 6px 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.85rem;
-  transition: all 0.2s;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .token-table button:hover {
   opacity: 0.9;
 }
 
-.token-table button:active {
-  transform: scale(0.98);
-}
-
-.token-table button.cancel {
+.cancel {
   background: #f87171;
   color: #fff;
 }
 
-.token-table button.update {
+.update {
   background: #10b981;
   color: #fff;
 }
 
-.token-table button.edit {
+.edit {
   background: #3b82f6;
   color: #fff;
 }
 
-.token-table button.prescribe {
+.prescribe {
   background: #6366f1;
   color: #fff;
 }
 
-/* Edit Issue Container */
+/* ===== Edit Issue ===== */
 .edit-issue {
   display: flex;
   align-items: center;
@@ -102,7 +103,6 @@
   flex-wrap: wrap;
 }
 
-/* Input field inside edit */
 .edit-issue input {
   padding: 6px 10px;
   border-radius: 6px;
@@ -114,11 +114,10 @@
 }
 
 .edit-issue input:focus {
-  border-color: #3b82f6; /* blue focus */
+  border-color: #3b82f6;
   outline: none;
 }
 
-/* Buttons inside edit */
 .edit-issue button {
   padding: 6px 12px;
   border-radius: 6px;
@@ -126,29 +125,28 @@
   font-weight: 500;
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
-/* Update Button */
-.edit-issue button:nth-child(2) {
-  background-color: #10b981; /* Green */
+.edit-issue button.update {
+  background-color: #10b981;
   color: #fff;
 }
 
-.edit-issue button:nth-child(2):hover {
+.edit-issue button.update:hover {
   background-color: #059669;
 }
 
-/* Absent Button */
-.edit-issue button:nth-child(3) {
-  background-color: #f87171; /* Red */
+.edit-issue button.absent {
+  background-color: #f87171;
   color: #fff;
 }
 
-.edit-issue button:nth-child(3):hover {
+.edit-issue button.absent:hover {
   background-color: #ef4444;
 }
 
+/* ===== Prescription Button ===== */
 .pres {
   cursor: pointer;
   border: none;
@@ -156,27 +154,23 @@
   font-size: 1rem;
   padding: 10px 20px;
   transition: all 0.3s ease;
-}
-
-/* Add Medicine Button */
-.pres:nth-of-type(1) {
   background: #2980b9;
   color: #fff;
-  margin-top: 10px;
 }
 
-.pres:nth-of-type(1):hover {
+.pres:hover {
   background: #1f6391;
 }
 
-@media (max-width: 1024px) {
+/* ===== Responsive Styles ===== */
+@media (max-width: 1280px) {
   .token-table th, .token-table td {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 10px 8px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .token-table, .token-table th, .token-table td {
     display: block;
     width: 100%;
@@ -219,10 +213,7 @@
     align-items: stretch;
   }
 
-  .edit-issue button {
-    width: 100%;
-  }
-
+  .edit-issue button,
   .edit-issue input {
     width: 100%;
   }

@@ -1,38 +1,44 @@
+/* ===== Patients Page Container ===== */
 .patients-page {
-  padding: 20px;
+  padding: 30px 20px;
   overflow-x: auto;
-  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
   min-height: 100vh;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
 .patients-page h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #004d40;
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.patients-page table {
+/* ===== Table Styles ===== */
+.patients-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  min-width: 600px;
   background: #fff;
+  min-width: 600px;
 }
 
-.patients-page th,
-.patients-page td {
+.patients-table th,
+.patients-table td {
   padding: 14px 16px;
   text-align: left;
   color: #333;
+  font-size: 0.95rem;
 }
 
-.patients-page th {
+.patients-table th {
   background-color: #00796b;
   color: #fff;
   font-weight: 600;
@@ -40,24 +46,25 @@
   letter-spacing: 0.5px;
 }
 
-.patients-page tbody tr {
+.patients-table tbody tr {
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.patients-page tbody tr:nth-child(even) {
+.patients-table tbody tr:nth-child(even) {
   background-color: #f0f0f0;
 }
 
-.patients-page tbody tr:hover {
-  background-color: #b2dfdb;
+.patients-table tbody tr:hover {
+  background-color: #80cbc4;
   transform: scale(1.01);
 }
 
-.patients-page td {
+.patients-table td {
   border-bottom: 1px solid #e0e0e0;
 }
 
+/* No Data Message */
 .patients-page .no-data {
   text-align: center;
   color: #004d40;
@@ -66,53 +73,57 @@
   font-weight: 500;
 }
 
-/* Clickable row style */
-.patients-page tr.clickable:hover {
-  background-color: #80cbc4;
+/* Clickable Row */
+.patients-table tr.clickable:hover {
+  background-color: #4db6ac;
 }
 
-/* Responsive */
+/* ===== Responsive Styles ===== */
+@media (max-width: 1280px) {
+  .patients-table th, .patients-table td {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+  }
+}
+
 @media (max-width: 1024px) {
-  .patients-page table {
-    font-size: 0.95rem;
-    min-width: 100%;
+  .patients-table {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  .patients-page table {
-    font-size: 0.85rem;
-  }
-
-  .patients-page th, 
-  .patients-page td {
-    padding: 10px;
+  .patients-table th, .patients-table td {
+    padding: 10px 8px;
   }
 }
+
 @media (max-width: 480px) {
-  .patients-page table, 
-  .patients-page th, 
-  .patients-page td {
+  .patients-table, .patients-table th, .patients-table td {
     display: block;
     width: 100%;
   }
 
-  .patients-page th {
-    text-align: left;
+  .patients-table th {
+    display: none;
   }
 
-  .patients-page tr {
+  .patients-table tr {
     margin-bottom: 15px;
     display: block;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
-  .patients-page td {
+  .patients-table td {
     border-bottom: none;
     padding-left: 50%;
     position: relative;
   }
 
-  .patients-page td::before {
+  .patients-table td::before {
     content: attr(data-label);
     position: absolute;
     left: 16px;
