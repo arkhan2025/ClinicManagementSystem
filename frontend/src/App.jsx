@@ -9,7 +9,7 @@ import PatientProfile from "./components/PatientProfile/patientProfile";
 import PatientForm from "./components/patientForm";
 import Prescriptions from "./components/prescriptionCard";
 import ProtectedRoute from "./components/Routes/ProtectedRoute";
-import { AuthProvider, useAuth } from "./components/context/AuthContext";
+import { AuthProvider, useAuth } from "./components/Context/AuthContext";
 
 const RoleRedirect = () => {
   const { user } = useAuth();
